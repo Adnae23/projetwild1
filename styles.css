@@ -1,125 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans+Condensed:wght@300&display=swap');
 
-
 body {
 	font-family: 'Open Sans Condensed', sans-serif;
-	padding: 0;
-	margin: 0;
-	background-color: #D7DCF7; /*gris clair*/
-	margin-top: 70px;
-	margin-bottom: 70px;
-
+	background-color:white;
 }
 
-ul {
+/*barre de navigation*/
+.menu-nav {
 	margin: 0;
 	padding: 0;
 }
 
+.menu-nav ul{
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+}
+
+.menu-nav li a{
+	text-decoration: none;
+	color: #162C9A;
+	padding:20px 16px;
+}
+
+.menu-nav ul li.btn:hover a{
+	background-color: #e2f6ff;
+	transition: 0.3s;
+	border-radius: 8px;
+}
+
+/*style de tout les li de la page*/
 li{
-	list-style-type: none; /*retirer les puces*/
+	list-style-type: none;
 	font-weight: bold;
-}
-
-/*header*/
-h1{
-	color: #162C9A; /*bleu foncé*/
-	padding-top: 120px;
-	text-align: center;
-	font-size: 4em;
-	font-family: 'Dancing Script', cursive;
-	text-shadow: 1px 3px 2px #84B1FD;
-}
-
-h3.dept{
-	color: #000; /*noir*/
-	text-align: center;
-	font-size: 2em;
-	font-family: 'Dancing Script', cursive;
-	text-shadow: 1px 3px 2px #E1ECFE;
-}
-
-
-/*nav*/
-
-nav{
-	width: 100%;
-	opacity: 0.9;
-}
-
-header li{
-	float: left;
 	font-size: 1.3em;
 }
 
+/*title h1 et span*/
+.title{
+	font-family: 'Dancing Script', cursive;
+	position: relative;
+}
 
-header li a{
-	text-decoration: none;
-	display: inline-block;
+.commune{
+	color: #162C9A;
+	font-size: 4em;
+	text-shadow: 1px 3px 2px #6a9ef1;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+.title span{
+	color: #000; /*noir*/
 	text-align: center;
-	padding:20px 16px;
-	color: #162C9A;
-}
-
-nav.menu-nav ul li.btn:hover a{
-	background-color: #FEFBF5;
-	color: #162C9A;
-	transition: 0.3s;
-	border-radius: 8px;
-	transform: scale(1.05);
-}
-
-nav ul li.flash a {
-  background-color: white;
-  color: #FF0000;
-  border: 5px solid #FF0000;
-  margin: 20px 16px 20px 16px;
-  padding: 0;
+	font-size: 0.6em;
+	margin: 10px;
 }
 
 /*image principale*/
-
-section.imagep{
-	margin-top: 30px;
-	margin-bottom: 10px; 
-	background-image: url("../img/paysage-ete.jpg");
-	background-size: cover;
-	height: 700px;
+.image-principale {
+	z-index: 1;
+	position: absolute;
+	height: 400px;
 	width: auto;
 	border-radius: 8px;
+	margin: 0% 20%;
 }
 
-div.histoire{
-	padding:0 20px;
-	padding-top: 110px;
-	color: #162C9A;
-	font-size: 1.2em;
-	font-weight: bold;
-}
-
-p{
-	background-color: #F7F0E0;
-	opacity: 0.65;
+/*image secondaire*/
+.image-opacity {
+	position: absolute;
+	z-index: 0;
+	height: 420px;
+	width: auto;
 	border-radius: 8px;
-	padding: 0px 10px;
+	margin: 1% 22%;
+	opacity: 0.4;
+}
+
+/*btn coté gauche image*/
+.left-nav li a{
+	text-decoration: none;
+	color: #162C9A;
+}
+
+.left-nav li{
+    width:100px;
+    border: 2px solid #162C9A;
+    height: 90px;
+	padding-top: 10px;
+	border-radius:100px;
 	text-align: center;
 }
 
-
-div.blason img{
-	width: 62px;
+.left-nav .left{
+	display: flex;
+	flex-direction: column;
 }
 
-#premierTrait{
-	height: 2px;
-	width: 25%;
-	margin: -3px auto;
-	background-color: #162C9A;
-}
-
-/*footer*/
-footer{
-	color: #162C9A; /*bleu foncé*/
-	padding: 0px 16px;
-	font-size: 1em;
+.left-nav .btn{
+	margin-bottom: 10px;
 }
