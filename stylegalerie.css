@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans+Condensed:wght@300&display=swap');
+
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	background-color:white;
+}
+
+/*h1 titre village*/
+.title{
+	font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    margin: 1%;
+    text-shadow: 1px 3px 2px #6a9ef1;
+    position: absolute;
+}
+
+
+/*barre menu*/
+.menu-nav ul{
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	margin-top: 15px;
+}
+
+.menu-nav li a{
+	text-decoration: none;
+	color: #162C9A;
+	padding: 10px 16px;
+}
+
+.btn{
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+.menu-nav ul li.btn:hover a{
+	background-color: #e2f6ff;
+	transition: 0.3s;
+	border-radius: 8px;
+}
+
+/*gestion des photos*/
+.photos {
+    margin-top: 8%;
+    width: 98vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.photos img{
+    margin: 5px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	body{
+        display : block;
+	}
+	.menu-nav ul{
+		display: flex;
+		flex-direction: column;
+	}
+	.menu-nav ul li.btn:hover a{
+		background-color: #e2f6ff00;
+	}
+	.title {
+        position: relative;
+        text-align: center;
+	}
+	.photos {
+		display: flex;
+		flex-wrap: column;
+		justify-content: center;
+	}
+
+}
+
+
+@media screen and (max-width: 992px) {
+	body{
+        display : block;
+	}
+	.menu-nav ul{
+		display: flex;
+		flex-direction: column;
+	}
+	.menu-nav ul li.btn:hover a{
+		background-color: #e2f6ff00;
+	}
+	.title {
+        position: relative;
+        text-align: center;
+		font-size: 2.5em;
+	}
+}

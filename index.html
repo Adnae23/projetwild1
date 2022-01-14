@@ -15,10 +15,10 @@
 	<!-- menu de navigation avec des puces ou btn -->
 	<nav id="menu-nav" class="menu-nav">
 		<ul class="menu">
-			<li class="btn"><a href="histoire.html">Histoire du village</a>
+			<li class="btn"><a href="history.html">Histoire du village</a>
 			<li class="btn"><a href="services.html">Services de la commune</a>
-			<li class="btn"><a href="galerie">Gallerie Photo</a></li>
-			<li class="btn"><a href="nous-contacter.html">Nous contacter</a></li>
+			<li class="btn"><a href="galerie.html">Galerie Photo</a></li>
+			<li class="btn"><a href="contact.html">Nous contacter</a></li>
 			<li id="icons"><a href="https://www.facebook.com/Mairie-de-Rouvroy-sur-Audry-112360280598810"
 					target="_blank"><i class="fa fa-facebook"></i></a></li>
 		</ul>
@@ -31,14 +31,59 @@
 	</section>
 
 
-	<nav id="left-nav" class="left-nav">
-		<ul class="left">
-			<li class="btn"><a href="">Idée séjour</a></li>
-			<li class="btn"><a href="">je sais pas encore ;)</a></li>
-			<li class="btn"><a href="">Forum</a></li>
-			<li class="btn"><a href="">Calendrier évènements</a></li>
-		</ul>
-	</nav>
+	<div id="left-div" class="left-div">
+		<div class="left">
+			<input type="button" class="btn" id="btnSejour" value="Idée séjour">
+			<input type="button" class="btn" id="btnBoite" value="Boite à idées">
+			<input type="button" class="btn" id="btnEvent" value="Evènements en cours">
+		</div>
+	</div>
 
+	<div class="divIdeeSejour" id="divIdeeSejour">
+		<div class="ideeSejourContent" id="ideeSejourContent">
+			<h3>Idée Séjour</h3>
+			<p>• Amoureux de la nature, vous apprécierez la randonnée à la découverte du sentier botanique de la Boulette. (randonnée pédestre ou VTT).
+			<br>Au aletnours du village : <br>
+			 A Vaux Vilaine (3.6km de Rouvroy), se trouve <a href="https://www.ardennes.com/vaux-villaine/un-ane-en-ardennes/tabid/3751/offreid/a98c7838-339f-48e3-a1dd-1d248b16ffab" target="blank">Un âne en Ardennes</a>
+			qui propose une activité originale "Une balade avec un âne."
+			</p>
+			<p>• Petite pause restauration à <a href="https://fr-fr.facebook.com/LAudry-719764834727902/" target="blank">L'Audry, restauration rapide</a>
+			qui convient parfaitement pour le break de midi</p>
+			<p>• Côté culturel, <a href="https://www.ardennes.com/rouvroy-sur-audry/eglise-de-servion/tabid/3751/offreid/5a67348e-ef72-4970-8bc7-d97808b15a96" target="_blank"></a>L'église de Servion
+				peut être visiter sur réservation.
+				Au aletnours du village : <br>
+				Dans le village de l'Echelle (2km de Rouvroy), vous pouvez observer un magnifique <a href="https://www.ardennes-thierache.com/fr/directory/entry/chateau-de-lechelle" target="blank">château</a> qui abrite actuellement un musée <a href="https://www.musee-lecole-dhier-08.com/" target="blank">"L'Ecole d'hier"</a>.
+				<br> Pour contacter la Mairie : 03 24 56 43 82 ou communeechelle@wanadoo.fr 
+			</p>
+			<p>• Quelques autres idées d'activités à découvrir : <br>
+				<a href="http://www.karting-lonny.fr/">Karting Lonny</a><br>
+				<a href="https://www.renwez.com/musee-de-la-foret-renwez/">Musée de la forêt à Renwez</a><br>
+				<a href="http://www.village-ardoise-rimogne.fr/">Village de l'ardoise à Rimogne</a>
+			<p>• Pour le repas du soir, vous apprécierez le restaurant <a href="https://www.facebook.com/LaTableDeRouvroy/?ref=page_internal" target="blank">La table de Rouvroy</a> et sa cuisine traditionnelle française avec des produits locaux</p>
+			<p>• Pour vous reposer, quoi de mieux qu'une ferme fortifiée
+				<a href="https://www.airbnb.fr/rooms/36099685?adults=1&federated_search_id=a1c1f0ac-cb56-476c-8fb4-f7c51814be6e&source_impression_id=p3_1641550400_%2B4wO9JXlAH1%2FX722" target="_blank">"La maison forte de Servion"</a>
+			 dans le petit quartier du village.
+			</p>
+			<input type="button" class="close" value="Fermer">
+		</div>
+	</div>
+	<div class="divEvent" id="divEvent">
+		<div class="eventContent" id="eventContent">
+			<img src="./img/affiche-event.jpg" alt="affiche évènement halloween" width="430px" height="auto"><br>
+			<input type="button" class="close" value="Fermer">
+		</div>
+	</div>
+	<div class="divBoiteIdee" id="divBoiteIdee">
+		<div class="boiteIdeeContent" id="boiteIdeeContent">
+			<h3>La boite à idées</h3>
+			<p class="anonyme">Toutes les idées ci-dessous resterons anonymes. </p>
+			<input type="button" class="ajouter" id="ajouter" value="Ajouter une idée"><br>
+			<input type="button" class="closeBi" id="closeBi" value="Fermer">
+			<div class="newIdeeUser" id="newIdeeUser">
+
+			</div>
+		</div>
+	</div>
+	<script src="index.js"></script>
 </body>
 </html>

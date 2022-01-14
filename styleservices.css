@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans+Condensed:wght@300&display=swap');
+
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	background-color:white;
+}
+
+/*h1 titre village*/
+.title{
+	font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    margin: 1%;
+    text-shadow: 1px 3px 2px #6a9ef1;
+    position: absolute;
+}
+
+/*barre de menu*/
+.menu-nav ul{
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	margin-top: 15px;
+}
+
+.menu-nav li a{
+	text-decoration: none;
+	color: #162C9A;
+	padding: 10px 16px;
+}
+
+.btn{
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+.menu-nav ul li.btn:hover a{
+	background-color: #e2f6ff;
+	transition: 0.3s;
+	border-radius: 8px;
+}
+
+/*paragraphe explication situation*/
+.situation{
+    font-size: 1.5em;
+    margin: 4em 0 0 1em;
+}
+
+/* div des liens*/
+.div-info {
+    margin-top: 5%;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* style des liens*/
+.lien-info{
+    width: 100%;
+    padding: 0%;
+    height: 100%;
+    text-align: center;
+}
+
+button {
+    padding: 0;
+	color: #162C9A;
+    background-color: #e2f6ff;
+    font-weight: bold;
+	font-size: 1.4em;
+    border: none;
+    width: 12%;
+    vertical-align: middle;
+}
+.info {
+	color: #162C9A;
+    background-color: #e2f6ff;
+    font-weight: bold;
+	font-size: 1.4em;
+    border: 1px solid #e2f6ff;
+    border-radius: 8px;
+    width: 12%;
+    vertical-align: middle;
+    height: 100%;
+    white-space: normal;
+}
+
+button.info{
+    height: 100%;
+    border-radius: 8px;
+}
+
+.info a {
+    text-decoration: none;
+    color: #162C9A;
+}
+
+.div-info .lien-info :hover {
+  	background-color:  #162c9ace;
+    color:  #e2f6ff;
+	transition: 0.4s;
+	border-radius: 8px;
+}
+
+.div-info .lien-info .info:hover a{
+    color:  #e2f6ff;
+    background-color: rgba(0, 0, 255, 0);  
+}
+
+/*div caché a réveler*/
+.sectCreche, .sectEcole, .sectCommerces, .sectMedical {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+/*contenu caché a réveler*/
+.contentCreche, .contentEcole, .contentCommerces, .contentMedical{
+    width: 90%;
+    height: 40%;
+    text-align: center;
+    margin: auto;
+    margin-top: 22%;
+    font-size: 1.4em;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.contentCreche{
+    background-image: url(./img/creche2.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.contentEcole{
+    background-image: url(./img/ecole2.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentEcole h3{
+    font-size: 2em;
+    margin-left: 20px;
+}
+
+.contentEcole p {
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+.contentCommerces{
+    background-image: url(./img/commerce3.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.contentMedical{
+    background-image: url(./img/medical2.jpg);
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    color: black;
+}
+
+.contentMedic {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*style bnt fermer*/
+.close{
+    padding: 0;
+	color: #162C9A;
+    background-color: #e2f6ff;
+    font-weight: bold;
+	font-size: 1.4em;
+    border: none;
+    width: 50%;
+    margin: 10px auto;
+}
+
+@media screen and (max-width: 992px) {
+	body{
+        display : block;
+	}
+	.menu-nav ul{
+		display: flex;
+		flex-direction: column;
+	}
+	.menu-nav ul li.btn:hover a{
+		background-color: #e2f6ff00;
+	}
+	.title {
+        position: relative;
+        text-align: center;
+        font-size: 2.5em;
+	}
+    .lien-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .info{
+        font-size: 1.2em;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .contentCreche, .contentEcole, .contentCommerces, .contentMedical{
+        width: 90%;
+        height: 90%;
+        margin-top: 0;
+        font-size: 1.2em;
+    }
+    .contentEcole{
+        display: block;
+    }
+    .contentCommerces{
+        background-image: none;
+    }
+    .close{
+        width: 35%;
+    }
+    .contentMedical{
+        background-image: url(./img/medical2.jpg);
+        background-repeat: no-repeat;
+        border-radius: 8px;
+        color: black;
+    }
+    .contentMedic div {
+        margin: 8px;
+    }
+}

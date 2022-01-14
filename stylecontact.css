@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans+Condensed:wght@300&display=swap');
+
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	background-color:white;
+}
+
+/*h1 titre village*/
+.title{
+	font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    margin: 10px;
+    text-shadow: 1px 3px 2px #6a9ef1;
+    position: absolute;
+}
+
+/*barre de menu*/
+.menu-nav ul{
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	margin-top: 15px;
+}
+
+.menu-nav li a{
+	text-decoration: none;
+	color: #162C9A;
+	padding: 10px 16px;
+}
+
+.btn{
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+.menu-nav ul li.btn:hover a{
+	background-color: #e2f6ff;
+	transition: 0.3s;
+	border-radius: 8px;
+}
+
+/*mot de la fin*/
+.mot {
+    font-size: 3em;
+    text-align: center;
+}
+
+/*la totalité des types de contact*/
+.allContact{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    height: 30em;
+    border: 2px solid #162C9A;
+    border-radius: 8px;
+    margin-top: 10%;
+    align-items: center;
+}
+
+/*contact classique partie de gauche*/
+.contactClassique{
+    width: 50%;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.8rem;
+}
+
+/*lien facebook*/
+section nav ul li{
+    list-style-type: none;
+}
+
+.contactClassique nav ul li a {
+    text-decoration: none;
+    color: #162C9A;
+}
+
+
+/*contact mail partie de droite*/
+.contactMail{
+    background-color: #cbebfa;
+    border-radius: 8px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputmail{
+   text-align: center;
+   width: 100%;
+   height: auto;
+   vertical-align: center;
+}
+
+.inputmail input{
+    width: 70%;
+    height: 4rem;
+    border: 2px solid #e2f6ff;
+    border-radius: 8px;
+    margin-bottom: 5%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5rem;
+}
+
+.inputmail textarea{
+    width: 70%;
+    height: 4rem;
+    border: 2px solid #e2f6ff;
+    border-radius: 8px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5rem;
+}
+
+.inputmail button{
+    background-color: #cbebfa;
+    border: #e2f6ff00;
+    width: 50%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2rem;
+    color: #162C9A;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	body{
+        display : block;
+	}
+	.menu-nav ul{
+		display: flex;
+		flex-direction: column;
+	}
+	.menu-nav ul li.btn:hover a{
+		background-color: #e2f6ff00;
+	}
+	.title {
+        position: relative;
+        text-align: center;
+        font-size: 1.9em;
+	}
+    .allContact{
+        display: block;
+        border: none;
+    }
+    .inputmail{
+        height: 90%;
+     }
+}
+
+
+@media screen and (max-width: 992px) {
+	body{
+        display : block;
+	}
+	.menu-nav ul{
+		display: flex;
+		flex-direction: column;
+	}
+	.menu-nav ul li.btn:hover a{
+		background-color: #e2f6ff00;
+	}
+	.title {
+        position: relative;
+        text-align: center;
+        font-size: 2.5em;
+	}
+    .allContact{
+        display: block;
+        border: none;
+    }
+    .contactMail{
+        width: 100%;
+        height: 65%;
+    }
+    .contactClassique{
+        width: 100%;
+        text-align: center;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 1.2rem;
+    }
+    .mot {
+        font-size: 2em;
+    }
+}

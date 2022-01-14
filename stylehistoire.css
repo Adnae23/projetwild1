@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans+Condensed:wght@300&display=swap');
+
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	background-color:white;
+}
+
+/*h1 titre village*/
+.title{
+	font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    margin: 1%;
+    text-shadow: 1px 3px 2px #6a9ef1;
+    position: absolute;
+}
+
+/*barre menu*/
+.menu-nav ul{
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	margin-top: 15px;
+}
+
+.menu-nav li a{
+	text-decoration: none;
+	color: #162C9A;
+	padding: 10px 16px;
+}
+
+.btn{
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+.menu-nav ul li.btn:hover a{
+	background-color: #e2f6ff;
+	transition: 0.3s;
+	border-radius: 8px;
+}
+
+/*section contenu blason*/
+.contenu{
+    display: flex;
+}
+
+/*div du blason*/
+.divBlason{
+    width: 9em;
+}
+
+/*image blason*/
+.blasonimg{
+    width: 100%;
+    height: auto;
+    margin: 7em 2em 0 2em;
+}
+
+/*paragraphe explication blason*/
+.blasonexp{
+    font-size: 1.5em;
+    margin-top: 5em ;
+    margin-left: 3em;
+}
+
+/*paragraphe histoire*/
+.histoire{
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+/*photos*/
+.photoNB {
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+.photoNB1{
+    width: 25%;
+    height: auto;
+    margin: 2em;
+}
+
+.photo2022{
+    width: 25%;
+    height: auto;
+    margin: 2em;
+}
+
+/*annotations sources*/
+.contenu div p{
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.photoNB p{
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+@media screen and (max-width: 992px) {
+	body{
+        display : flex;
+		flex-direction: column;
+	}
+	.menu-nav ul{
+		display: flex;
+		flex-direction: column;
+	}
+	.menu-nav ul li.btn:hover a{
+		background-color: #e2f6ff00;
+	}
+	.title{
+        position: relative;
+        text-align: center;
+        font-size: 2.5em;
+	}
+    .blasonimg{
+        width: 100%;
+        height: auto;
+        margin: 7em 2em 0 2em;
+    }
+    .photoNB {
+        display: block;
+    }
+    .photoNB1{
+        width: 50%;
+        height: auto;
+    }
+    .photo2022{
+        width: 50%;
+        height: auto;
+    }
+
+	
+}

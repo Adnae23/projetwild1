@@ -3,24 +3,31 @@
 body {
 	font-family: 'Open Sans Condensed', sans-serif;
 	background-color:white;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 10% 80%;
 }
+
 
 /*barre de navigation*/
 .menu-nav {
 	margin: 0;
 	padding: 0;
+    grid-column: 1 / span 2;
+    grid-row: 1;
 }
 
 .menu-nav ul{
 	display: flex;
 	justify-content: flex-end;
 	margin: 0;
+	margin-top: 15px;
 }
 
 .menu-nav li a{
 	text-decoration: none;
 	color: #162C9A;
-	padding:20px 16px;
+	padding: 10px 16px;
 }
 
 .menu-nav ul li.btn:hover a{
@@ -40,6 +47,8 @@ li{
 .title{
 	font-family: 'Dancing Script', cursive;
 	position: relative;
+    grid-column: 1 / span 2;
+    grid-row: 2;
 }
 
 .commune{
@@ -48,56 +57,350 @@ li{
 	text-shadow: 1px 3px 2px #6a9ef1;
 	margin-bottom: 10px;
 	margin-top: 0;
+	margin-left: 1%;
 }
 
 .title span{
-	color: #000; /*noir*/
+	color: #000;
 	text-align: center;
 	font-size: 0.6em;
-	margin: 10px;
+	margin: 1%;
 }
 
 /*image principale*/
 .image-principale {
 	z-index: 1;
 	position: absolute;
-	height: 400px;
+	height: 390px;
 	width: auto;
 	border-radius: 8px;
-	margin: 0% 20%;
+	margin: 5% 20%;
+    grid-column: 2;
+    grid-row: 3;
 }
 
 /*image secondaire*/
 .image-opacity {
 	position: absolute;
 	z-index: 0;
-	height: 420px;
+	height: 390px;
 	width: auto;
 	border-radius: 8px;
-	margin: 1% 22%;
+	margin: 4% 20em;
 	opacity: 0.4;
+    grid-column: 2;
+    grid-row: 3;
 }
 
 /*btn coté gauche image*/
-.left-nav li a{
+.left {
+	margin-left: 5em;
+	margin-top: 2em;
+}
+
+.left-div .left .btn{
 	text-decoration: none;
 	color: #162C9A;
 }
 
-.left-nav li{
+.left-div .btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
     width:100px;
     border: 2px solid #162C9A;
-    height: 90px;
-	padding-top: 10px;
+    height: 100px;
 	border-radius:100px;
 	text-align: center;
+	margin-top: 25%;
+	white-space: normal;
+	background-color: #e2f6ff;
+	font-size: 1.3em;
+	font-family: 'Open Sans Condensed', sans-serif;;
 }
 
-.left-nav .left{
+.left-div .left{
 	display: flex;
 	flex-direction: column;
+    grid-column: 1;
+    grid-row: 3;
 }
 
-.left-nav .btn{
-	margin-bottom: 10px;
+/*div caché a réveler*/
+/*idée séjour*/
+.divIdeeSejour {
+	z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
 }
+
+.ideeSejourContent {
+    width: 90%;
+    height: 95%;
+    background-color: white;
+    text-align: left;
+    margin: auto;
+    font-size: 1em;
+    border-radius: 8px;
+}
+
+.ideeSejourContent p{
+	margin-left: 2%;
+	font-size: 1.3em;
+}
+
+.ideeSejourContent h3{
+	text-align: center;
+	font-size: 1.6em;
+	color: #162C9A;
+}
+
+/*evenement en cours*/
+.divEvent {
+	z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+	display: none;
+}
+
+.eventContent img{
+    background-color: white;
+	margin-left: 32%;
+    border-radius: 8px;
+}
+
+/*boite à idee*/
+.divBoiteIdee{
+	z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+	display: none;
+}
+
+.boiteIdeeContent{
+	width: 90%;
+    height: 90%;
+    background-color: white;
+    text-align: left;
+    margin: auto;
+    margin-top: 2%;
+    font-size: 1em;
+    border-radius: 8px;
+}
+
+.boiteIdeeContent h3{
+	text-align: center;
+	font-size: 2em;
+	color: #162C9A;
+}
+
+.anonyme{
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.newIdeeUser{
+	width: 90%;
+    height: 90%;
+	margin-left: 2%;
+	margin-top: 2%;
+	font-size: 1.3em;
+}
+
+/*style btn ajouter un idée*/
+.ajouter{
+	padding: 0;
+	color: #162C9A;
+    background-color: #e2f6ff;
+    font-weight: bold;
+	font-size: 1.4em;
+    border: none;
+    width: 15%;
+	margin-left: 3%;
+
+}
+/*style btn fermé Boite à idée*/
+.closeBi{
+	padding: 0;
+	color: #162C9A;
+    background-color: #e2f6ff;
+    font-weight: bold;
+	font-size: 1.4em;
+    border: none;
+    width: 15%;
+	margin-left: 3%;
+	margin-top: 1%;
+}
+
+
+/*style bnt fermer*/
+.close{
+    padding: 0;
+	color: #162C9A;
+    background-color: #e2f6ff;
+    font-weight: bold;
+	font-size: 1.4em;
+    border: none;
+    width: 12%;
+	margin-left: 42%;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	body{
+        display : block;
+	}
+	.menu-nav ul{
+		display: flex;
+		flex-direction: column;
+	}
+	.menu-nav ul li.btn:hover a{
+		background-color: #e2f6ff00;
+	}
+	.commune {
+		text-align: center;
+		font-size: 2em;
+	}
+	.image-principale {
+		height: 370px;
+		width: auto;
+		border-radius: 8px;
+		margin: 0 auto;		
+	}
+	/*image secondaire*/
+	.image-opacity {
+		display: none;
+	}
+	.left-div .left{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.left {
+		margin: 15em 2em;
+	}
+	.left-div .btn{
+		width: 90px;
+		height: 90px;
+	}
+	.ideeSejourContent {
+		width: 90%;
+		height: 95%;
+		font-size: 0.9em;
+	}
+	.divIdeeSejour {
+		width: 70vh;
+	}
+	.ideeSejourContent {
+		width: 90%;
+		height: 95%;
+		font-size: 0.7em;
+		margin: 0 auto;
+	}
+	/*style bnt fermer*/
+	.close{
+		width: 20%;
+	}
+	/*style btn fermé Boite à idée*/
+	.closeBi{
+		width: 20%;
+	}
+	/*style btn ajouter un idée*/
+	.ajouter{
+		width: 50%;;
+	}
+
+}
+
+@media screen and (max-width: 768px) { /* à revoir*/
+	body{
+		display : flex;
+		flex-direction: column;
+	}
+	.menu-nav ul{
+		display: flex;
+		flex-direction: column;
+	}
+	.menu-nav ul li.btn:hover a{
+		background-color: #e2f6ff00;
+	}
+	.commune {
+		font-size: 1.9em;
+		text-align: center;
+	}
+	.image-principale {
+		height: auto;
+		width: 90vw;
+		border-radius: 8px;
+		margin: 0 auto;		
+	}
+	/*image secondaire*/
+	.image-opacity {
+		display: none;
+	}
+	.left-div .left{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.left {
+		margin: 10em 2em;
+	}
+	.left-div .btn{
+		width: 90px;
+		height: 90px;
+	}
+	.divIdeeSejour {
+		width: 70vh;
+	}
+	.ideeSejourContent {
+		width: 80%;
+		height: 90%;
+		font-size: 0.7em;
+		margin: 1px;
+	}
+	/*style bnt fermer*/
+	.close{
+		width: 20%;
+	}
+	/*style btn fermé Boite à idée*/
+	.closeBi{
+		width: 25%;
+	}
+	/*style btn ajouter un idée*/
+	.ajouter{
+		width: 90%;;
+	}
+	.EventContent img{
+		width: 100%;
+		height: 90%;
+		margin: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
